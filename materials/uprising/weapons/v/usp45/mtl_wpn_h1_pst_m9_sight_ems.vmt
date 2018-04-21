@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+     "$basetexture" "uprising\weapons\v\usp45\green"
+
+	 $selfillum "1"
+}

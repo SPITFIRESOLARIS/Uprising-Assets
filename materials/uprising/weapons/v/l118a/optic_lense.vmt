@@ -1,0 +1,27 @@
+VertexLitGeneric
+{
+	"$baseTexture" "uprising\attachments\v\lens\Lens"
+	"$bumpmap"     "uprising\attachments\v\lens\lens_n"
+	"$normalmapalphaenvmapmask"	"0"
+
+	"$model" 		"1"
+	"$translucent" 	"1"
+	"$phong"		"1"
+	"$phongtint"	"[.5 .5 .5]"
+	"$envmap" 	"env_cubemap"
+//	"$envmaptint" 	"[5 2 1]"
+
+	"Proxies"
+	{
+		"Uprising_IronsightVectorResult"
+		{
+			"resultVar"		"$envmaptint"
+			"ResultDefault"	"2 0 3"
+			"ResultZoomed"	"0 0 0"
+			"Result2Var" "$translucent" 
+			"Result2Default" "0"
+			"Result2Zoomed"  "1"
+
+		}
+	}
+}

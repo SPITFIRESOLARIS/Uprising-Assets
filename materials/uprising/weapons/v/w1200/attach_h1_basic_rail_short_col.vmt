@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "uprising\weapons\v\w1200\attach_h1_basic_rail_short_col"
+     "$bumpmap" "uprising\weapons\v\w1200\attach_h1_basic_rail_short_nml"
+
+
+     "$phong" 1
+    
+     "$phongboost" 0.1
+     "$phongfresnelranges" "[5 5 11]"
+     "$phongalbedotint" "1"
+     "$phongalbedoboost" "38"
+
+     "$rimlight" "0"
+     "$rimlightexponent" "88"
+     "$rimlightboost""1.8"
+     "$rimmask" "1"
+}

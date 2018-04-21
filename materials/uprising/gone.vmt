@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	"$basetexture"	"uprising/gone"
+	"$no_draw" "1"
+}

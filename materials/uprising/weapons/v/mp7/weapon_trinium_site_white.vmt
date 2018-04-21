@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "uprising\weapons\v\mp7\weapon_trinium_site_white"
+	 $translucent 1 
+	 $selfillum 1
+
+
+
+}

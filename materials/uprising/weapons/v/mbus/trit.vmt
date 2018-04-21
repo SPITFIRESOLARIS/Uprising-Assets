@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "uprising\weapons\v\mbus\trit"
+	 
+	 $selfillum 1
+
+}
