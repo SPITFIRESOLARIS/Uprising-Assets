@@ -12,7 +12,9 @@ TFA.UPRISING.LensReplacements[ "uprising/attachments/v/rmrpistol/optic_lense" ] 
 TFA.UPRISING.LensReplacements[ "uprising/attachments/v/pistolrds/optic_lense" ] = true
 TFA.UPRISING.LensReplacements[ "uprising/attachments/v/eotechl3/optic_lense" ] = true
 TFA.UPRISING.LensReplacements[ "uprising/attachments/v/targetfinder/optic_lense" ] = true
-TFA.UPRISING.LensReplacements[ "uprising/attachments/v/compm4/optic_lense" ] = true
+TFA.UPRISING.LensReplacements[ "uprising/attachments/v/bravo4/optic_lense" ] = true
+TFA.UPRISING.LensReplacements[ "uprising/attachments/v/mh1/optic_lense" ] = true
+
 
 function TFA.UPRISING.DrawStencilEnt( wep, ent, attTbl )
 

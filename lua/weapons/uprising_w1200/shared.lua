@@ -61,15 +61,14 @@ SWEP.Primary.KickHorizontal = 0.19 -- This is the maximum sideways recoil (no re
 SWEP.Primary.StaticRecoilFactor = 0.6 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .08 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
-SWEP.Primary.IronAccuracy = .07 -- Ironsight accuracy, should be the same for shotguns
+SWEP.Primary.IronAccuracy = .08 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax = 2--How far the spread can expand when you shoot. Example val: 2.5
 SWEP.Primary.SpreadIncrement = 2 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 2--How much the spread recovers, per second. Example val: 3
 --Range Related
-SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
-SWEP.Primary.RangeFalloff = 0.15 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
-
+SWEP.Primary.Range = 501 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
+SWEP.Primary.RangeFalloff = 0.2 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 
 --Penetration Related
 SWEP.MaxPenetrationCounter = 4 --The maximum number of ricochets.  To prevent stack overflows.
@@ -225,7 +224,7 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = { ["reload_startgrip"] = 0.5, ["reload_start"] = 0.5,   } --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {["rechgrip"] = 0.6, ["rechads"] = 0.6, ["rechadsgrip"] = 0.6} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceLengthOverride = { ["rechads"] = 0.6, ["rechadsgrip"] = 0.6} --Changes both the status delay and the nextprimaryfire of a given animation
 SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 

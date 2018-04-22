@@ -22,13 +22,13 @@ SWEP.Primary.SilencedSound = Sound("UPRISING_AKALPHA.Firesil") -- This is the so
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 33 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
-SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
-SWEP.Primary.Force = nil --Force value, leave nil to autocalc
+SWEP.Primary.DamageType = DMG_BULLET --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
+SWEP.Primary.Force = 0 --Force value, leave nil to autocalc
 SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
-SWEP.Primary.RPM = 660 -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 620 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Semi = nil -- RPM for semi-automatic or burst fire.  This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Burst = nil -- RPM for burst fire, overrides semi.  This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
@@ -62,7 +62,7 @@ SWEP.Primary.StaticRecoilFactor = 0.6 --Amount of recoil to directly apply to Ey
 SWEP.Primary.Spread = .08 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy = .005 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
-SWEP.Primary.SpreadMultiplierMax = 2--How far the spread can expand when you shoot. Example val: 2.5
+SWEP.Primary.SpreadMultiplierMax = 1.3--How far the spread can expand when you shoot. Example val: 2.5
 SWEP.Primary.SpreadIncrement = 0.5 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 3--How much the spread recovers, per second. Example val: 3
 --Range Related
@@ -198,6 +198,14 @@ SWEP.IronSightTime = 0.4
 	SWEP.AltPos_ELCAN = Vector( 0, -3, -0.9 )
 	SWEP.AltAng_ELCAN = Vector( -1, 0, 45 )
 
+
+	SWEP.IronSightsPos_MH1 = Vector(-3.5348, -3.0728, 0.5377)
+	SWEP.IronSightsAng_MH1 = Vector()
+
+	SWEP.IronSightsPos_ROMEO4 = Vector(-3.5407, 1.18, 0.5289)
+	SWEP.IronSightsAng_ROMEO4 = Vector()
+
+
 --[[INSPECTION]]--
 SWEP.InspectPos = Vector(9.135, -2.737, 1.985)
 SWEP.InspectAng = Vector(15.005, 57.194, 16.266)
@@ -294,7 +302,7 @@ SWEP.ViewModelBoneMods = {
 }
 
 SWEP.WorldModelBoneMods = {
-	["muzzle"] = { scale = Vector(0.8,0.8,0.8), pos = Vector(-1.8, 0, -0), angle = Angle(0, 0, 90) },
+	["muzzle"] = { scale = Vector(1,1,1), pos = Vector(-1.8, 0, -0), angle = Angle(0, 0, 0) },
 	["laser"] = { scale = Vector(1,1,1), pos = Vector(3, 0, -.1), angle = Angle(0, 0, 180) },
 	["beam"] = { scale = Vector(1,1,1), pos = Vector(0,0, 0), angle = Angle(0, 0, 0) },
 	["sight"] = { scale = Vector(1,1,1), pos = Vector(0,0, -0.3), angle = Angle(0, 0, 0) },
@@ -306,13 +314,16 @@ SWEP.VElements = {
 ["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.2), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.1), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["rds"] = { type = 'Model', model = "models/uprising/attachments/v/rds/bo2rds.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.2), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["romeo4"] = { type = 'Model', model = "models/uprising/attachments/v/rds/sigbravo4.mdl", bone = "tag_sights_on", pos = Vector(0, -0.1034, -0.3155), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["mh1"] = { type = 'Model', model = "models/uprising/attachments/v/rds/hartmanmh1.mdl", bone = "tag_sights_on", pos = Vector(0, -0.1034, -0.3155), angle = Angle(), size = Vector(1.1, 1.1, 1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["aimpoint"] = { type = 'Model', model = "models/uprising/attachments/v/rds/aimpoint.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.2), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["eotechl3"] = { type = 'Model', model = "models/uprising/attachments/v/rds/eotechl3.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.2), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["targetfinder"] = { type = 'Model', model = "models/uprising/attachments/v/rds/targetfinder.mdl", bone = "tag_sights_on", pos = Vector(0, 0, -0.2), angle = Angle(), size = Vector(1.1,1.1,1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/riflesilencer.mdl", bone = "tag_flash", pos = Vector(-2, 0, 0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/pistolsilencer.mdl", bone = "tag_flash", pos = Vector(-2, 0, 0), angle = Angle(), size = Vector(1.4643, 1.4643, 1.4643), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "j_gun", pos = Vector(15.0958, 1.0003, 2.0828), angle = Angle(-90, -180, -90), size = Vector(1.0772, 1.0772, 1.0772), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["grip"] = { type = 'Model', model = "models/uprising/attachments/v/grips/grip.mdl", bone = "tag_foregrip", pos = Vector(0, 0, 0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["afg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/afg.mdl", bone = "tag_foregrip", pos = Vector(0, 0, 0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["atg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/tacgrip.mdl", bone = "tag_foregrip", pos = Vector(0, 0, 0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "beam", rel = "laser", pos = Vector(0.8,0,0.4), angle = Angle(0, 90, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false }
 
 }
@@ -321,19 +332,21 @@ SWEP.VElements = {
 
 
 
-
 SWEP.WElements = { 
 ["ref"] = { type = "Model", model = SWEP.WorldModel, bone = "oof", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1.1, 1.1, 1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false },
 ["rds"] = { type = 'Model', model = "models/uprising/attachments/v/rds/bo2rds.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
+["romeo4"] = { type = 'Model', model = "models/uprising/attachments/v/rds/sigbravo4.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
+["mh1"] = { type = 'Model', model = "models/uprising/attachments/v/rds/hartmanmh1.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["aimpoint"] = { type = 'Model', model = "models/uprising/attachments/v/rds/aimpoint.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["eotechl3"] = { type = 'Model', model = "models/uprising/attachments/v/rds/eotechl3.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["targetfinder"] = { type = 'Model', model = "models/uprising/attachments/v/rds/targetfinder.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["acog"] = { type = 'Model', model = "models/uprising/attachments/v/optics/acogmoh.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
-["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/riflesilencer.mdl", bone = "muzzle", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
+["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/pistolsilencer.mdl", bone = "muzzle", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "laser", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["grip"] = { type = 'Model', model = "models/uprising/attachments/v/grips/grip.mdl", bone = "grip", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
+["atg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/tacgrip.mdl", bone = "grip", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["afg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/afg.mdl", bone = "grip", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false }
 
 }
@@ -345,7 +358,8 @@ SWEP.Attachments = {
 
 	[1] = {
 	header = "Sights",
-	 offset = { 0, 0 }, atts = { "uprising_si_rds", "uprising_si_eotechl3", "uprising_si_aimpoint",  "uprising_si_targetfinder", "uprising_si_elcan", "uprising_si_acog", "uprising_si_hybrid" }, order = 1 },
+	sel = 1,
+	 offset = { 0, 0 }, atts = { "uprising_si_mh1",  "uprising_si_bravo4",  "uprising_si_rds", "uprising_si_eotechl3", "uprising_si_aimpoint",  "uprising_si_targetfinder", "uprising_si_elcan", "uprising_si_acog", "uprising_si_hybrid" }, order = 1 },
 	[2] = {
 	header = "Barrel",
 	 offset = { 0, 0 }, atts = { "uprising_suppressor" }, order = 2 },
@@ -354,7 +368,8 @@ SWEP.Attachments = {
 	offset = { 0, 0 }, atts = { "uprising_laser" }, order = 3 },	
 	[4] = { 
 	header = "Underbarrel",
-	offset = { 0, 0 }, atts = { "uprising_grip", "uprising_afg" }, order = 4 },
+	sel = 1,
+	offset = { 0, 0 }, atts = { "uprising_tacgrip", "uprising_grip", "uprising_afg" }, order = 4 },
 	[5] = {
 	header = "Weapon Mods",
 	 offset = { 0, 0 }, atts = { "uprising_modifiedrifling", "uprising_precisionbarrel" }, order = 5 }
