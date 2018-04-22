@@ -41,7 +41,7 @@ SWEP.IronOutSound = nil --Sound to play when ironsighting out?  nil for default
 SWEP.CanBeSilenced = false --Can we silence?  Requires animations.
 SWEP.Silenced = false --Silenced by default?
 -- Selective Fire Stuff
-SWEP.SelectiveFire = true --Allow selecting your firemode?
+SWEP.SelectiveFire = false --Allow selecting your firemode?
 SWEP.DisableBurstFire = true --Only auto/single?
 SWEP.OnlyBurstFire = false --No auto, only burst/single?
 SWEP.DefaultFireMode = "semi" --Default to auto or whatev
