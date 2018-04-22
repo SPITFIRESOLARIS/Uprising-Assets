@@ -22,7 +22,7 @@ SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 SWEP.Primary.Sound = Sound("UPRISING_M24.Fire") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("UPRISING_L118A.Firesil") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 115 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 105 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
@@ -43,7 +43,7 @@ SWEP.IronOutSound = nil --Sound to play when ironsighting out?  nil for default
 SWEP.CanBeSilenced = false --Can we silence?  Requires animations.
 SWEP.Silenced = false --Silenced by default?
 -- Selective Fire Stuff
-SWEP.SelectiveFire = true --Allow selecting your firemode?
+SWEP.SelectiveFire = false --Allow selecting your firemode?
 SWEP.DisableBurstFire = false --Only auto/single?
 SWEP.OnlyBurstFire = false --No auto, only burst/single?
 SWEP.DefaultFireMode = "" --Default to auto or whatev
@@ -69,7 +69,7 @@ SWEP.Primary.SpreadIncrement = 0.7 --What percentage of the modifier is added on
 SWEP.Primary.SpreadRecovery = 5--How much the spread recovers, per second. Example val: 3
 --Range Related
 SWEP.Primary.Range = 40800  -- L96's affective range is 850 Yards. One foot is 16 source units.  850m = 2550ft.  16 * 2550 = 40800   -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
-SWEP.Primary.RangeFalloff = 0.9 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.RangeFalloff = 0.5 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 --Penetration Related
 SWEP.MaxPenetrationCounter = 5 --The maximum number of ricochets.  To prevent stack overflows.
 --Misc
@@ -109,7 +109,7 @@ SWEP.HoldType = "ar2" -- This is how others view you carrying the weapon. Option
 -- You're mostly going to use ar2, smg, shotgun or pistol. rpg and crossbow make for good sniper rifles
 SWEP.Offset = {
 	Pos = {
-		Up = -1,
+		Up = -3,
 		Right = 1,
 		Forward = 4
 	},
@@ -118,7 +118,7 @@ SWEP.Offset = {
 		Right = -10,
 		Forward = 180
 	},
-	Scale = 1
+	Scale = 1.1
 } --Procedural world model animation, defaulted for CS:S purposes.
 
 
@@ -280,7 +280,7 @@ SWEP.WorldModelBoneMods = {
 	["muzzle"] = { scale = Vector(0.6,0.6,0.6), pos = Vector(-2.3, 0, -0), angle = Angle(0, 0, 0) },
 	["laser"] = { scale = Vector(1,1,1), pos = Vector(-0,0, 0), angle = Angle(0, 0, 0) },
 	["beam"] = { scale = Vector(1,1,1), pos = Vector(0,0, 0), angle = Angle(0, 0, 0) },
-	["sight"] = { scale = Vector(0.9,0.9,0.9), pos = Vector(0,0, -0.3), angle = Angle(0, 0, 0) },
+	["sight"] = { scale = Vector(0.9,0.9,0.9), pos = Vector(0,0, 0), angle = Angle(0, 0, 0) },
 }
 
 
@@ -290,7 +290,7 @@ SWEP.VElements = {
 ["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "tag_acog", pos = Vector(-2, 0, -0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "tag_acog", pos = Vector(-2, 0, -0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/snipersilencer.mdl", bone = "tag_flash", pos = Vector(-2, 0, 0), angle = Angle(), size = Vector(0.8,0.8,0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "j_gun", pos = Vector(16.7074, -1.2197, 0.5681), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "j_gun", pos = Vector(16.3671, -0.892, 2.6315), angle = Angle(90, 0, -90), size = Vector(0.7881, 0.7881, 0.7881), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "beam", rel = "laser", pos = Vector(0.8,0,0.4), angle = Angle(0, 90, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false }
 
 }
@@ -302,7 +302,7 @@ SWEP.VElements = {
 
 SWEP.WElements = { 
 ["ref"] = { type = "Model", model = SWEP.WorldModel, bone = "oof", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1.1, 1.1, 1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false },
-["defaultscope"] = { type = 'Model', model = "models/uprising/attachments/w/scopes/scope.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
+["defaultscope"] = { type = 'Model', model = "models/uprising/attachments/v/scopes/scope.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["acog"] = { type = 'Model', model = "models/uprising/attachments/v/optics/acog.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
 ["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "sight", rel = "ref", pos = Vector(0,0,0), angle = Angle(0,0,0), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {}, bonemerge = true,  active = false },
