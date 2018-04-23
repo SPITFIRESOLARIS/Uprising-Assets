@@ -20,7 +20,7 @@ SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 SWEP.Primary.Sound = Sound("UPRISING_SUPER90.Fire") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("UPRISING_AA12.Firesil") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 17 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 14 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
@@ -66,8 +66,8 @@ SWEP.Primary.SpreadMultiplierMax = 2--How far the spread can expand when you sho
 SWEP.Primary.SpreadIncrement = 0.7 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 2--How much the spread recovers, per second. Example val: 3
 --Range Related
-SWEP.Primary.Range = 501 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
-SWEP.Primary.RangeFalloff = 0.2 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.Range = 500 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
+SWEP.Primary.RangeFalloff = 0.1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 
 --Penetration Related
 SWEP.MaxPenetrationCounter = 4 --The maximum number of ricochets.  To prevent stack overflows.
