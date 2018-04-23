@@ -372,6 +372,47 @@ SWEP.MuzzleAttachmentSilencedWorld = 1
 SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 5
 
+local mat = Material( "uprising/trails/sniper_trail" )
+
+function SWEP:CustomBulletCallback( a, b )
+
+	if CLIENT then
+
+		local startP = a.StartPos - Vector( 0, 0, 1 )
+		local endP = a.HitPos
+		local res = startP:Distance( endP ) * 0.01
+
+		if startP and endP then
+
+			local name = "TracerDraw_".. math.random( 1, 1000 )
+			local a = 255
+
+			hook.Add( "PostDrawTranslucentRenderables", name, function()
+
+				a = math.Clamp( a - 0.3, 0, 255 )
+
+				if a <= 0 then
+
+					hook.Remove( "PostDrawTranslucentRenderables", name )
+
+				end
+
+				render.SetMaterial( mat )
+
+				render.StartBeam( 2 )
+
+					render.AddBeam( startP, 6, 0, Color( 255, 235, 215, a ) )
+					render.AddBeam( endP, 6, res, Color( 255, 235, 215, a ) )
+
+				render.EndBeam()
+
+			end )
+
+		end
+
+	end
+
+end
 
 DEFINE_BASECLASS( SWEP.Base )
 

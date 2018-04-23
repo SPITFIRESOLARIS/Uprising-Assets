@@ -69,6 +69,8 @@ function ENT:Initialize()
 			end
 
 		end
+		
+		util.SpriteTrail( self, 0, Color( 255, 255, 255 ), false, 4, 0, 1, 2, "uprising/trails/nade_trail.vmt" )
 
 	end
 	
