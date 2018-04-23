@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "uprising\attachments\v\acogmoh\mount"
+     "$bumpmap" "uprising\attachments\v\acogmoh\nm"
+
+
+     "$phong" 1
+  //   "$translucent" 1
+     "$phongboost" 0.1
+     "$phongfresnelranges" "[5 5 11]"
+     "$phongalbedotint" "1"
+     "$phongalbedoboost" "38"
+
+     "$rimlight" "0"
+     "$rimlightexponent" "88"
+     "$rimlightboost""1.8"
+     "$rimmask" "1"
+}

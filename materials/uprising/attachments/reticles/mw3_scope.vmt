@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"uprising\attachments\reticles\mw3_scope"
+	"$translucent"	1
+	"$vertexcolor"  1
+	"$vertexalpha"  1
+}

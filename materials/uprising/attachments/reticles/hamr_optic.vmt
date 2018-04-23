@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"uprising\attachments\reticles\hamr_optic"
+	"$translucent"	1
+	"$vertexcolor"  1
+	"$vertexalpha"  1
+}

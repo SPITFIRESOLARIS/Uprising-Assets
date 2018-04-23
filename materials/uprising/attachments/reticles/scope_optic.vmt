@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"uprising\attachments\reticles\warface_scope_default"
+	"$translucent"	1
+	"$vertexcolor"  1
+	"$vertexalpha"  1
+}

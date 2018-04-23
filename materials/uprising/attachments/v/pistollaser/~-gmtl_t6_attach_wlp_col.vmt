@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "uprising\attachments\v\pistollaser\~-gmtl_t6_attach_wlp_col"
+     "$bumpmap" "uprising\attachments\v\pistollaser\mtl_t6_attach_wlp_nml"
+
+
+     "$phong" 1
+    
+     "$phongboost" 0.1
+     "$phongfresnelranges" "[5 5 11]"
+     "$phongalbedotint" "1"
+     "$phongalbedoboost" "38"
+
+     "$rimlight" "0"
+     "$rimlightexponent" "88"
+     "$rimlightboost""1.8"
+     "$rimmask" "1"
+}

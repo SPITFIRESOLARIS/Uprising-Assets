@@ -54,20 +54,21 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.2 -- This is the maximum upwards recoil (rise)
-SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.04 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickUp = 0.23 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickDown = 0.11 -- This is the maximum downwards recoil (skeet)
+SWEP.Primary.KickHorizontal = 0.1 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 0.6 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
-SWEP.Primary.Spread = .08 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.Spread = .06 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy = .015 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
-SWEP.Primary.SpreadMultiplierMax = 1.3--How far the spread can expand when you shoot. Example val: 2.5
+SWEP.Primary.SpreadMultiplierMax = 1.2--How far the spread can expand when you shoot. Example val: 2.5
 SWEP.Primary.SpreadIncrement = 0.7 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 5--How much the spread recovers, per second. Example val: 3
 --Range Related
-SWEP.Primary.Range = -1 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
-SWEP.Primary.RangeFalloff = 0.4 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.Range = 1000  -- L96's affective range is 850 Yards. One foot is 16 source units.  850m = 2550ft.  16 * 2550 = 40800   -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
+SWEP.Primary.RangeFalloff = 0.2 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+
 --Penetration Related
 SWEP.MaxPenetrationCounter = 4 --The maximum number of ricochets.  To prevent stack overflows.
 --Misc

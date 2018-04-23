@@ -26,7 +26,7 @@ SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
 SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
-SWEP.Primary.NumShots = 11 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
+SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = false -- Automatic/Semi Auto
 SWEP.Primary.RPM_Displayed = 70 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM = 240 -- This is in Rounds Per Minute / RPM
@@ -61,13 +61,13 @@ SWEP.Primary.KickHorizontal = 0.19 -- This is the maximum sideways recoil (no re
 SWEP.Primary.StaticRecoilFactor = 0.6 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .08 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
-SWEP.Primary.IronAccuracy = .08 -- Ironsight accuracy, should be the same for shotguns
+SWEP.Primary.IronAccuracy = .0 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax = 2--How far the spread can expand when you shoot. Example val: 2.5
 SWEP.Primary.SpreadIncrement = 2 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 2--How much the spread recovers, per second. Example val: 3
 --Range Related
-SWEP.Primary.Range = 501 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
+SWEP.Primary.Range = 500 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
 SWEP.Primary.RangeFalloff = 0.2 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 
 --Penetration Related

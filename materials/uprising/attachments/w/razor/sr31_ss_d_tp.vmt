@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	$basetexture			"uprising\attachments\w\razor\sr39_ss_d_tp"
+	$bumpmap 			"uprising\attachments\w\razor\n"
+        "$color"			"[1 1 1]"
+
+
+	"$phong"                        "1"
+	"$phongalbedotint"              "1"
+	"$phongtint"                    "[.6 .8 1]"
+
+	"$phongboost"                   ".2"
+	"$phongexponent"                "80"
+	"$phongfresnelranges"           "[1 2.5 7]"
+

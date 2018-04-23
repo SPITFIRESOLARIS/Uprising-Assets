@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"uprising\attachments\reticles\ta31_optic"
+	"$translucent"	1
+	"$vertexcolor"  1
+	"$vertexalpha"  1
+	"$nodraw" 1
+}

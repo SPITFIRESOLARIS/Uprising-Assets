@@ -1,0 +1,13 @@
+UnlitGeneric
+{
+	"$baseTexture" "uprising/attachments/v/lens/rt_lens"
+
+	$model 1
+
+	"Proxies"
+	{
+		"Uprising_RT"
+		{
+		}
+	}
+}
