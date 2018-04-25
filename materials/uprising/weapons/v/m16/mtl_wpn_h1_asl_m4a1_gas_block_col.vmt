@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-     "$basetexture" "uprising\weapons\v\m16\weapon_m16_iw5_col"
-     "$bumpmap" "uprising\weapons\v\m16\weapon_m16_iw5_nml"
+     "$basetexture" "uprising\weapons\v\m16\mtl_wpn_h1_asl_m4a1_gas_block_col"
+     "$bumpmap" "uprising\weapons\v\m16\mtl_wpn_h1_asl_m4a1_gas_block_nml"
 
 
      "$phong" 1
