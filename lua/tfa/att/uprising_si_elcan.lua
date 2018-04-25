@@ -32,6 +32,8 @@ ATTACHMENT.WeaponTable = {
 		},
 	
 	},	
+
+	["AimViewModelFOV"] = 45,
 	["AltPosActive"] = true,
 	[ "AltPos" ] = function( wep, val ) return wep.AltPos_ELCAN or val end,
 	["AltAng"] = function( wep, val ) return wep.AltAng_ELCAN or val end,

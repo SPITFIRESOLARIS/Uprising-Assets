@@ -9,7 +9,7 @@ SWEP.Spawnable				= true --Can you, as a normal user, spawn this?
 SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie into your admin mod necessarily, unless its coded to allow for GMod's default ranks somewhere in its code.  Evolve and ULX should work, but try to use weapon restriction rather than these.
 SWEP.DrawCrosshair			= true		-- Draw the crosshair?
 SWEP.DrawCrosshairIS = false --Draw the crosshair in ironsights?
-SWEP.PrintName				= "M16"		-- Weapon name (Shown on HUD)
+SWEP.PrintName				= "M16A4"		-- Weapon name (Shown on HUD)
 SWEP.Slot				= 0			-- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
 SWEP.SlotPos				= 73			-- Position in the slot
 SWEP.AutoSwitchTo			= false		-- Auto switch to if we pick it up
@@ -167,38 +167,39 @@ SWEP.Secondary.IronFOV = 70 -- How much you 'zoom' in. Less is more!  Don't have
 SWEP.IronSightTime = 0.4
 
 
+	SWEP.IronSightsPos = Vector(-2.573, -3.7795, 0.2684)
+	SWEP.IronSightsAng = Vector(0.2444, 0.0111, 0)
 
-	SWEP.IronSightsPos = Vector(-2.9681, -3.5134, 0.086)
-	SWEP.IronSightsAng = Vector(-0.7413, 0.0111, 0)
-
-	SWEP.IronSightsPos_RDS = Vector(-2.9696, -1.7173, 0.0716)
+	SWEP.IronSightsPos_RDS = Vector(-2.5768, -1.7831, 0.6301)
 	SWEP.IronSightsAng_RDS = Vector()
 
-	SWEP.IronSightsPos_EOTECHL3 = Vector(-2.958, -3.2507, -0.0311)
+	SWEP.IronSightsPos_EOTECHL3 = Vector(-2.5583, -2.1845, 0.496)
 	SWEP.IronSightsAng_EOTECHL3 = Vector()
 
-	SWEP.IronSightsPos_AIMP = Vector(-2.9669, -1.8758, 0.3181)
+	SWEP.IronSightsPos_AIMP = Vector(-2.568, -2.3074, 0.8385)
 	SWEP.IronSightsAng_AIMP = Vector()
 
-	SWEP.IronSightsPos_TF = Vector(-2.9822, -6.6173, 0.0492)
+	SWEP.IronSightsPos_TF = Vector(-2.5779, -5.3695, 0.466)
 	SWEP.IronSightsAng_TF = Vector()
 
-	SWEP.IronSightsPos_ELCAN = Vector(-2.9646, -2.2381, 0.1794)
+	SWEP.IronSightsPos_ELCAN = Vector(-2.5687, 0.0793, 0.655)
 	SWEP.IronSightsAng_ELCAN = Vector()
 
-
-	SWEP.IronSightsPos_ACOG = Vector(-2.966, -2.9126, 0.1546)
+	SWEP.IronSightsPos_ACOG = Vector(-2.5719, -3.0122, 0.5873)
 	SWEP.IronSightsAng_ACOG = Vector()
 
-
-	SWEP.IronSightsPos_HAMR = Vector(-2.9678, -3.9806, 0.3495)
+	SWEP.IronSightsPos_HAMR = Vector(-2.5713, -2.1181, 0.808)
 	SWEP.IronSightsAng_HAMR = Vector()
 
-	SWEP.AltPos_HAMR = Vector(0, -2, -1.2)
+
+	SWEP.AltPos_ELCAN = Vector(-1.887, -0.5795, -0.0193)
+	SWEP.AltAng_ELCAN = Vector(0.3796, 0.0102, 46.6112)
+
+
+	SWEP.AltPos_HAMR = Vector(-2.5813, -2.1181, -0.2718)
 	SWEP.AltAng_HAMR = Vector()
 
-	SWEP.AltPos_ELCAN = Vector( 0, -3, -0.9 )
-	SWEP.AltAng_ELCAN = Vector( -1, 0, 45 )
+
 
 --[[INSPECTION]]--
 SWEP.InspectPos = Vector(9.135, -2.737, 1.985)
@@ -226,7 +227,7 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 
 SWEP.StatusLengthOverride = {} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
 SWEP.SequenceLengthOverride = { } --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = { [ACT_VM_HOLSTER] = 0.6, [ACT_VM_DRAW] = 0.8  } --Like above but changes animation length to a target
+SWEP.SequenceRateOverride = { [ACT_VM_HOLSTER] = 0.5, [ACT_VM_DRAW] = 0.6,  } --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.ProceduralHoslterEnabled = nil
@@ -291,8 +292,8 @@ SWEP.AnimCycle = 0 -- Start on the right
 
 -- I'm gay
 SWEP.ViewModelBoneMods = {
-	["j_shoulder_ri"] = { scale = Vector(1,1,1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
-	["j_shoulder_le"] = { scale = Vector(1,1,1), pos = Vector(0,0,0), angle = Angle(0, 0, 0) }
+	["j_shoulder_ri"] = { scale = Vector(0.93,0.93,0.93), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) },
+	["j_shoulder_le"] = { scale = Vector(0.93,0.93,0.93), pos = Vector(0,0,0), angle = Angle(0, 0, 0) }
 }
 
 SWEP.WorldModelBoneMods = {
@@ -304,17 +305,17 @@ SWEP.WorldModelBoneMods = {
 
 
 SWEP.VElements = {
-["acog"] = { type = 'Model', model = "models/uprising/attachments/v/optics/acogmoh.mdl", bone = "tag_eotech", pos = Vector(-0, 0, -0.25), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "tag_eotech", pos = Vector(-0, 0, -0.2), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "tag_eotech", pos = Vector(-0, 0, -0.2), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["rds"] = { type = 'Model', model = "models/uprising/attachments/v/rds/bo2rds.mdl", bone = "tag_eotech", pos = Vector(-0, 0, -0.25), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["aimpoint"] = { type = 'Model', model = "models/uprising/attachments/v/rds/aimpoint.mdl", bone = "tag_eotech", pos = Vector(0, 0, -0.25), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["eotechl3"] = { type = 'Model', model = "models/uprising/attachments/v/rds/eotechl3.mdl", bone = "tag_eotech", pos = Vector(0, 0, -0.25), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["targetfinder"] = { type = 'Model', model = "models/uprising/attachments/v/rds/targetfinder.mdl", bone = "tag_eotech", pos = Vector(0, 0, -0.25), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["acog"] = { type = 'Model', model = "models/uprising/attachments/v/optics/acogmoh.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["elcan"] = { type = 'Model', model = "models/uprising/attachments/v/optics/elcan.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["hamr"] = { type = 'Model', model = "models/uprising/attachments/v/optics/hybrid.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["rds"] = { type = 'Model', model = "models/uprising/attachments/v/rds/bo2rds.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0.15), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["aimpoint"] = { type = 'Model', model = "models/uprising/attachments/v/rds/aimpoint.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0.1), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["eotechl3"] = { type = 'Model', model = "models/uprising/attachments/v/rds/eotechl3.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0.1), angle = Angle(), size = Vector(0.9,0.9,0.9), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["targetfinder"] = { type = 'Model', model = "models/uprising/attachments/v/rds/targetfinder.mdl", bone = "tag_reflex", pos = Vector(1, 0, -0.1), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["suppressor"] = { type = 'Model', model = "models/uprising/attachments/v/muzzles/riflesilencer.mdl", bone = "tag_flash", pos = Vector(-1.5, 0, 0), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "j_gun", pos = Vector(15.9215, -1.3578, 2.4), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["grip"] = { type = 'Model', model = "models/uprising/attachments/v/grips/grip.mdl", bone = "tag_foregrip", pos = Vector(0, 0, -0.3), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
-["afg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/afg.mdl", bone = "tag_foregrip", pos = Vector(0, 0, -0.3), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["laser"] = { type = 'Model', model = "models/uprising/attachments/v/lams/riflelaser.mdl", bone = "j_gun", pos = Vector(15.3965, -1.1502, 3.2403), angle = Angle(90, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["grip"] = { type = 'Model', model = "models/uprising/attachments/v/grips/grip.mdl", bone = "tag_foregrip", pos = Vector(0, 0, 0.5), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
+["afg"] = { type = 'Model', model = "models/uprising/attachments/v/grips/afg.mdl", bone = "tag_foregrip", pos = Vector(0, 0, 0.5), angle = Angle(), size = Vector(1,1,1), color = Color(255, 255, 255, 255), surpresslightning = false, material = '', skin = 0, bodygroup = {},  active = false },
 ["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "beam", rel = "laser", pos = Vector(0.8,0,0.4), angle = Angle(0, 90, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false }
 
 }
@@ -368,7 +369,7 @@ SWEP.GripBoneMods = {
 	["j_mid_le_1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(6.479, 23.697, 0) },
 	["j_index_le_0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(26.27, 49.159, 38.838) },
 	["j_ring_le_1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 28.735, 0) },
-	["j_shoulder_le"] = { scale = Vector(1, 1, 1), pos = Vector(1.832, 2, 1), angle = Angle(0, 0, 0) },
+	["j_shoulder_le"] = { scale = Vector(1, 1, 1), pos = Vector(5, 2.5, -1.4), angle = Angle(0, 0, 0) },
 	["j_pinky_le_0"] = { scale = Vector(1, 1, 1), pos = Vector(-0.362, -0.951, -1.469), angle = Angle(3.319, -41.199, 41.981) },
 	["j_mid_le_0"] = { scale = Vector(1, 1, 1), pos = Vector(0.177, 0.453, 0), angle = Angle(7.46, 27.201, 29.517) },
 	["j_elbow_le"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-16.386, -2.824, 34.922) },
