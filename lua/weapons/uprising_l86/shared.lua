@@ -54,9 +54,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.22 -- This is the maximum upwards recoil (rise)
-SWEP.Primary.KickDown = 0.17 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.14 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickUp = 0.2 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickDown = 0.1 -- This is the maximum downwards recoil (skeet)
+SWEP.Primary.KickHorizontal = 0.1 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 0.6 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .14 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
@@ -77,7 +77,7 @@ SWEP.MaxPenetrationCounter = 4 --The maximum number of ricochets.  To prevent st
 SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier = 0.7 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
 --Movespeed
-SWEP.MoveSpeed = 0.8 --Multiply the player's movespeed by this.
+SWEP.MoveSpeed = 0.85 --Multiply the player's movespeed by this.
 SWEP.IronSightsMoveSpeed = SWEP.MoveSpeed  * 0.8 --Multiply the player's movespeed by this when sighting.
 --[[PROJECTILES]]--
 SWEP.ProjectileEntity = nil --Entity to shoot

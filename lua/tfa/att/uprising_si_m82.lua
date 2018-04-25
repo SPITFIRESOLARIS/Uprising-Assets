@@ -1,7 +1,7 @@
 if not ATTACHMENT then
 	ATTACHMENT = {}
 end
-local zoom = 5.5 --Your desired scope zoom
+local zoom = 5 --Your desired scope zoom
 local fov = 70 / zoom / 2 --Put this at the top; RT FOV
 
 ATTACHMENT.Name = "5.5x Scope"
@@ -24,7 +24,7 @@ ATTACHMENT.WeaponTable = {
 	["IronSightsPos"] = function( wep, val ) return wep.IronSightsPos_M82 or val end,
 	["IronSightsAng"] = function( wep, val ) return wep.IronSightsAng_M82 or val end,
 
-    ["AimViewModelFOV"] = 50,
+    ["AimViewModelFOV"] = 45,
     ["IronSightsSensitivity"] = 0.1,
     ["RTMaterialOverride"] = -1,
 	["BlowbackVector"] = Vector(0.00,-0.75,0.00),
