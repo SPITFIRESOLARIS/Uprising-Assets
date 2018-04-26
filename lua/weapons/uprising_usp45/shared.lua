@@ -28,7 +28,7 @@ SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = false -- Automatic/Semi Auto
-SWEP.Primary.RPM = 660 -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 500 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Semi = nil -- RPM for semi-automatic or burst fire.  This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Burst = nil -- RPM for burst fire, overrides semi.  This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
@@ -41,7 +41,7 @@ SWEP.IronOutSound = nil --Sound to play when ironsighting out?  nil for default
 SWEP.CanBeSilenced = false --Can we silence?  Requires animations.
 SWEP.Silenced = false --Silenced by default?
 -- Selective Fire Stuff
-SWEP.SelectiveFire = true --Allow selecting your firemode?
+SWEP.SelectiveFire = false --Allow selecting your firemode?
 SWEP.DisableBurstFire = true --Only auto/single?
 SWEP.OnlyBurstFire = false --No auto, only burst/single?
 SWEP.DefaultFireMode = "Semi" --Default to auto or whatev
